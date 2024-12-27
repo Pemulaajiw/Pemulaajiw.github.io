@@ -107,9 +107,9 @@ def display_menu():
  
 # display menu       
     clear_screen()
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-print(f" \E[41;1;37m                        ◎ AutoScriptVPN-AIO (V1.2) ◎                 \E[0m"
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
+print(f" \E[41;1;37m                        ◎ AutoScriptVPN-AIO (V1.2) ◎                 \033[0m")
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
 print(f" \e[037;1m \033[97;1m System OS    : {os_name} {os_version} \033[0m")
 print(f" \e[037;1m \033[97;1m Cpu Usage    : {cpu_usage}%           \033[0m")
 print(f" \e[037;1m \033[97;1m Cpu CORE     : {cpu_current}          \033[0m")
@@ -118,9 +118,9 @@ print(f" \e[037;1m \033[97;1m Usage RAM    : {ram_usage}            \033[0m")
 print(f" \e[037;1m \033[97;1m Domain       : {domain}               \033[0m")
 print(f" \e[037;1m \033[97;1m IP VPS       : {ip_vps}               \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
-print(f" \033[38;5;160m$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
+print(f" \033[38;5;160m    \033[41;97;1m HARI ini: ${red}$ttoday KEMARIN: $tyest BULAN: $tmon \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
-print(f" \033[38;5;160m${NC} ${Cyan}UPLOAD: ${red}${trxu}${NC}         ◎        ${BICyan}DOWNLOAD: ${red}${trxd} ${NC}"
+print(f" \033[38;5;160m      \033[41;97;1m UPLOAD: ${trxu}         ◎        DOWNLOAD: ${trxd} \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
 print(f" \033[38;5;184m SSH: {ssh}  |  VMESS: {vme}  |  VLESS: {vle}  | TROJAN: {tro}  | DONE \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
