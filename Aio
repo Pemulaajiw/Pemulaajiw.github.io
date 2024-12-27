@@ -108,29 +108,27 @@ def display_menu():
 # display menu       
     clear_screen()
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-print(f" \E[41;1;37m                  ◎ AutoScriptVPN-AIO (V1.2) ◎                 \E[0m"
+print(f" \E[41;1;37m                        ◎ AutoScriptVPN-AIO (V1.2) ◎                 \E[0m"
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-print(f" \e[037;1m Operating System:${green} $OS5 / $OS1 ${white}[${green} $f1 ${white}]"
-print(f" \e[037;1m CPU Model:${green} $cname"
-print(f" \e[037;1m Number Of Cores:${green} $cores"
-print(f" \e[037;1m CPU Frequency:${green} $freq MHz"
-print(f" \e[037;1m Total Amount Of RAM:${green} $tram MB"
-print(f" \e[037;1m System Uptime:${green} $up"
-print(f" \e[037;1m DOMAIN:${green} $DOMAIN"
-print(f" \e[037;1m CPU Usage:${green} $cpu${NC}"
-print(f" \e[037;1m Ram VPS Total:${green} $frem${NC}"
-print(f" \e[037;1m Swap Ram VPS Total:${green} $freswp${NC}"
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \e[037;1m \033[97;1m System OS    : {os_name} {os_version} \033[0m")
+print(f" \e[037;1m \033[97;1m Cpu Usage    : {cpu_usage}%           \033[0m")
+print(f" \e[037;1m \033[97;1m Cpu CORE     : {cpu_current}          \033[0m")
+print(f" \e[037;1m \033[97;1m Total RAM    : {ram_total}            \033[0m")
+print(f" \e[037;1m \033[97;1m Usage RAM    : {ram_usage}            \033[0m")
+print(f" \e[037;1m \033[97;1m Domain       : {domain}               \033[0m")
+print(f" \e[037;1m \033[97;1m IP VPS       : {ip_vps}               \033[0m")
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
 print(f" \033[38;5;160m$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
 print(f" \033[38;5;160m${NC} ${Cyan}UPLOAD: ${red}${trxu}${NC}         ◎        ${BICyan}DOWNLOAD: ${red}${trxd} ${NC}"
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
 print(f" \033[38;5;184m SSH: {ssh}  |  VMESS: {vme}  |  VLESS: {vle}  | TROJAN: {tro}  | DONE \033[0m")
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-print(f" \033[38;5;160m DROPBEAR ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  V2RAYFLY ${NC}: $resv2r"" ${BICyan} STUNNEL ${NC}: $reha"
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-print(f" \E[41;1;37m                             ◎ [ MENU VPS  ] ◎                            \E[0m"
-print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
+print(f" \033[38;5;160m     \033[92;1m•\033[97;1m SCRIPT ID KEY   : {username}                   \033[0m")
+print(f" \033[38;5;160m     \033[92;1m•\033[97;1m SCRIPT EXPIRY   : {days_left} DAYS REMAINDERS  \033[0m")
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
+print(f" \E[41;1;37m                             ◎ [ MENU VPS  ] ◎                            \033[0m")
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
      print(f" \033[38;5;160m      \033[97;1m1. Ssh/OPENVPN/Udp     \033[38;5;160m \033[0m     \033[97;1m6. BACKUP / RESTORE \033[0m")
      print(f" \033[38;5;160m      \033[97;1m2. x-Ray VMess v2ray   \033[38;5;160m \033[0m     \033[97;1m7. BOT TELEGRAM     \033[0m")
      print(f" \033[38;5;160m      \033[97;1m3. x-Ray VLess v2ray   \033[38;5;160m \033[0m     \033[97;1m8. REBUILD VPS      \033[0m")
