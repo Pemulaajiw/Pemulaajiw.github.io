@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-
+# the domain you want to ping test
+url="nhentai.net"
+# do a ping check against the url and cut only the ping text
+ping=$(ping_result=$(ping -c 1 $url | grep -oP 'time=\K\d+\.\d+')
+if (( $(echo "$ping_result < 100" | bc -l) )); then
+    echo -e "\e[32m$ping_result ms\e[0m"
+elif (( $(echo "$ping_result < 200" | bc -l) )); then
+    echo -e "\e[33m$ping_result ms\e[0m"
+else
+    echo -e "\e[31m$ping_result ms\e[0m"
+fi)
+clear
 # || BANDUNG BARAT || JAWA BARAT || INDONESIA ||
 # || KECAMATAN || SAGULING || DESA JATI ||
 # || DIAN PERMANA || GOMEZ ||
@@ -90,7 +101,18 @@ def display_menu():
     nginx_status = statuses["nginx"]
 
 # Get system vps information
+    dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
+    utoday="$(vnstat -i eth0 | grep "today" | awk '{print $5" "substr ($6, 1, 1)}')"
+    ttoday="$(vnstat -i eth0 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}')"
+    dyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $2" "substr ($3, 1, 1)}')"
+    uyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $5" "substr ($6, 1, 1)}')"
+    tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}')"
+    dmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $3" "substr ($4, 1, 1)}')"
+    umon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $6" "substr ($7, 1, 1)}')"
+    tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}')"
     os_name = subprocess.getoutput("grep '^NAME=' /etc/os-release | cut -d '=' -f2 | tr -d '\"'")
+    trxd=$(vnstat -tr | grep "rx" | awk '{print $2, $3}')
+    trxu=$(vnstat -tr | grep "tx" | awk '{print $2, $3}')
     os_version = subprocess.getoutput("grep '^VERSION=' /etc/os-release | cut -d '=' -f2 | tr -d '\"'")
     cpu_usage = subprocess.getoutput("top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}'")
     domain = subprocess.getoutput("cat /etc/xray/domain")
@@ -116,9 +138,9 @@ print(f" \e[037;1m \033[97;1m Cpu CORE     : {cpu_current}          \033[0m")
 print(f" \e[037;1m \033[97;1m Total RAM    : {ram_total}            \033[0m")
 print(f" \e[037;1m \033[97;1m Usage RAM    : {ram_usage}            \033[0m")
 print(f" \e[037;1m \033[97;1m Domain       : {domain}               \033[0m")
-print(f" \e[037;1m \033[97;1m IP VPS       : {ip_vps}               \033[0m")
+print(f" \e[037;1m \033[97;1m IP VPS       : {ip_vps}  {ping}       \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
-print(f" \033[38;5;160m    \033[41;97;1m HARI ini: ${red}$ttoday KEMARIN: $tyest BULAN: $tmon \033[0m")
+print(f" \033[38;5;160m    \033[41;97;1m HARI ini: $ttoday KEMARIN: $tyest BULAN: $tmon \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
 print(f" \033[38;5;160m      \033[41;97;1m UPLOAD: ${trxu}         ◎        DOWNLOAD: ${trxd} \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
