@@ -134,16 +134,16 @@ print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━
      print(f" \033[38;5;160m      \033[97;1m3. x-Ray VLess v2ray   \033[38;5;160m \033[0m     \033[97;1m8. REBUILD VPS      \033[0m")
      print(f" \033[38;5;160m      \033[97;1m4. x-ray TRojan libev  \033[38;5;160m \033[0m     \033[97;1m9. FEATURES         \033[0m")
      print(f" \033[38;5;160m      \033[97;1m5. Vps bench monitor   \033[38;5;160m \033[0m     \033[97;1mx. EXIT             \033[0m")
-echo -e "1. Menu SSH Panel VPN
-2. Menu V2Ray Panel VPN
-3. Change Subdomain Server
-4. Renew Certificate Domain
-5. Backup & Restore Data Menu
-6. Menu Webmin Web Server Manager VPS
-7. Monitoring Cpu/Ram/Bandwidth via Gotop
-8. Menu Update & Downgrade V2rayfly Core Tunneling
-9. Change Timezone In Server To Check Uptime Date Server
-0. Change Baner SSH, OpenSSH, Stunnel5 & Dropbear Server"
+print(f" \033[38;5;160m      \033[97;1m1. Menu SSH Panel VPN                     \033[0m")
+print(f" \033[38;5;160m      \033[97;1m2. Menu Vmess Panel VPN                   \033[0m")
+print(f" \033[38;5;160m      \033[97;1m3. Menu Vless Panel VPN                   \033[0m")
+print(f" \033[38;5;160m      \033[97;1m4. Menu Trojan Panel VPN                  \033[0m")
+print(f" \033[38;5;160m      \033[97;1m5. Monitoring Cpu/Ram/Bandwidth via Gotop \033[0m")
+print(f" \033[38;5;160m      \033[97;1m6. Backup & Restore Data Menu             \033[0m")
+print(f" \033[38;5;160m      \033[97;1m7. Bot Telegram Menu                      \033[0m")
+print(f" \033[38;5;160m      \033[97;1m8. Menu Rebuild Vps                       \033[0m")
+print(f" \033[38;5;160m      \033[97;1m9. Menu Settings                          \033[0m")
+print(f" \033[38;5;160m      \033[97;1mx. Menu Exit                          \033[0m")
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 print(f" \033[38;5;160m$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
