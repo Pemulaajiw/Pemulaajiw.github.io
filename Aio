@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+
+# || BANDUNG BARAT || JAWA BARAT || INDONESIA ||
+# || KECAMATAN || SAGULING || DESA JATI ||
+# || DIAN PERMANA || GOMEZ ||
+
+import os
+import platform
+import subprocess
+import sys
+from datetime import datetime, timedelta
+
+import subprocess
+from datetime import datetime
+
+# Ambil IP VPS
+ip_vps = subprocess.getoutput("curl -sS ipv4.icanhazip.com")
+
+# Ambil data validitas dan username dari URL
+raw_data = subprocess.getoutput("curl -sS https://raw.githubusercontent.com/arivpnstores/izin/main/ip")
+
+# Filter validitas dan username berdasarkan IP
+valid_date = subprocess.getoutput(f"echo '{raw_data}' | grep {ip_vps} | awk '{{print $3}}'")
+username = subprocess.getoutput(f"echo '{raw_data}' | grep {ip_vps} | awk '{{print $2}}'")
+
+# Hitung sisa hari
+if valid_date:
+    valid_date_obj = datetime.strptime(valid_date, "%Y-%m-%d")  # Pastikan format sesuai dengan tanggal yang diambil
+    current_date = datetime.now()
+    days_left = (valid_date_obj - current_date).days
+else:
+    days_left = None
+
+def clear_screen():
+    if platform.system() == "Windows":
+        os.system('cls')  # Perintah untuk Windows
+    else:
+        os.system('clear')  # Perintah untuk Linux/macOS
+def check_validity():
+    my_ip = subprocess.getoutput("curl -sS ipv4.icanhazip.com")
+    izin = subprocess.getoutput("curl -sS https://raw.githubusercontent.com/arivpnstores/izin/main/ip | awk '{print $4}'")
+    
+    if my_ip in izin:
+        print("IZIN DITERIMA")
+        clear_screen()
+    else:
+        merah = "\033[91;1m"
+        bodas = "\033[97;1m"
+        yelow = "\033[0;33m"
+        sufix = "\033[0m"
+        print(f"{bodas}======================================================={sufix}")
+        print(f"{merah}                      DENIED!                          {sufix}")
+        print(f"{bodas}======================================================={sufix}")
+        print()
+        print(f"{bodas}IP {my_ip} Belum Terdaftar Di Script Kami              {sufix}")
+        print(f"{bodas}       Silahkan Hubungi Kontak Kami Di bawah Ini       {sufix}")
+        print(f"{yelow}           Whatsapp : wa.me/6281327393959              {sufix}")
+        print(f"{bodas}======================================================={sufix}")
+        sys.exit(1)
+
+import subprocess
+
+def get_status(service_name):
+    status = subprocess.getoutput(f"systemctl is-active {service_name}")
+    return status.lower() == "active"
+
+def display_menu():
+    dodger = "\033[92;1m"
+    debian_red = "\033[38;5;162m"
+
+    services = {
+        "nginx": "nginx",
+        "ssh": "ssh",
+        "dropbear": "dropbear",
+        "haproxy": "haproxy",
+        "xray": "xray",
+        "ws": "ws"
+    }
+
+    statuses = {
+        name: f"{dodger}ONLINE\033[0m" if get_status(service) else f"{debian_red}OFFLINE\033[0m"
+        for name, service in services.items()
+    }
+        
+    # Format status into your desired output
+    haproxy_status = statuses["haproxy"]
+    eprows_status = statuses["ws"]
+    drober_status = statuses["dropbear"]
+    xray_status = statuses["xray"]
+    nginx_status = statuses["nginx"]
+
+# Get system vps information
+    os_name = subprocess.getoutput("grep '^NAME=' /etc/os-release | cut -d '=' -f2 | tr -d '\"'")
+    os_version = subprocess.getoutput("grep '^VERSION=' /etc/os-release | cut -d '=' -f2 | tr -d '\"'")
+    cpu_usage = subprocess.getoutput("top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}'")
+    domain = subprocess.getoutput("cat /etc/xray/domain")
+    ip_vps = subprocess.getoutput("curl -s ipv4.icanhazip.com")
+    cpu_current = subprocess.getoutput("grep -c 'cpu[0-9]' /proc/stat")
+    ram_total = subprocess.getoutput("free -h | awk '/^Mem:/ {print $2}'")
+    ram_usage = subprocess.getoutput("free -h | awk '/^Mem:/ {print $3}'")
+    
+# Get list of accounts
+    ssh = subprocess.getoutput("awk -F: '$3 >= 1000 && $1 != \"nobody\" {print $1}' /etc/passwd | wc -l")
+    vle = subprocess.getoutput("grep -c -E '^#& ' /etc/xray/config.json")
+    vme = subprocess.getoutput("grep -c -E '^### ' /etc/xray/config.json")
+    tro = subprocess.getoutput("grep -c -E '^#! ' /etc/xray/config.json")
+ 
+# display menu       
+    clear_screen()
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \E[41;1;37m                  ◎ AutoScriptVPN-AIO (V1.2) ◎                 \E[0m"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \e[037;1m Operating System:${green} $OS5 / $OS1 ${white}[${green} $f1 ${white}]"
+print(f" \e[037;1m CPU Model:${green} $cname"
+print(f" \e[037;1m Number Of Cores:${green} $cores"
+print(f" \e[037;1m CPU Frequency:${green} $freq MHz"
+print(f" \e[037;1m Total Amount Of RAM:${green} $tram MB"
+print(f" \e[037;1m System Uptime:${green} $up"
+print(f" \e[037;1m DOMAIN:${green} $DOMAIN"
+print(f" \e[037;1m CPU Usage:${green} $cpu${NC}"
+print(f" \e[037;1m Ram VPS Total:${green} $frem${NC}"
+print(f" \e[037;1m Swap Ram VPS Total:${green} $freswp${NC}"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m${NC} ${Cyan}UPLOAD: ${red}${trxu}${NC}         ◎        ${BICyan}DOWNLOAD: ${red}${trxd} ${NC}"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;184m SSH: {ssh}  |  VMESS: {vme}  |  VLESS: {vle}  | TROJAN: {tro}  | DONE \033[0m")
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m DROPBEAR ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  V2RAYFLY ${NC}: $resv2r"" ${BICyan} STUNNEL ${NC}: $reha"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \E[41;1;37m                             ◎ [ MENU VPS  ] ◎                            \E[0m"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+     print(f" \033[38;5;160m      \033[97;1m1. Ssh/OPENVPN/Udp     \033[38;5;160m \033[0m     \033[97;1m6. BACKUP / RESTORE \033[0m")
+     print(f" \033[38;5;160m      \033[97;1m2. x-Ray VMess v2ray   \033[38;5;160m \033[0m     \033[97;1m7. BOT TELEGRAM     \033[0m")
+     print(f" \033[38;5;160m      \033[97;1m3. x-Ray VLess v2ray   \033[38;5;160m \033[0m     \033[97;1m8. REBUILD VPS      \033[0m")
+     print(f" \033[38;5;160m      \033[97;1m4. x-ray TRojan libev  \033[38;5;160m \033[0m     \033[97;1m9. FEATURES         \033[0m")
+     print(f" \033[38;5;160m      \033[97;1m5. Vps bench monitor   \033[38;5;160m \033[0m     \033[97;1mx. EXIT             \033[0m")
+echo -e "1. Menu SSH Panel VPN
+2. Menu V2Ray Panel VPN
+3. Change Subdomain Server
+4. Renew Certificate Domain
+5. Backup & Restore Data Menu
+6. Menu Webmin Web Server Manager VPS
+7. Monitoring Cpu/Ram/Bandwidth via Gotop
+8. Menu Update & Downgrade V2rayfly Core Tunneling
+9. Change Timezone In Server To Check Uptime Date Server
+0. Change Baner SSH, OpenSSH, Stunnel5 & Dropbear Server"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+print(f" \033[38;5;160m$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
+print(f" \033[38;5;160m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+
+
+    print(f" \033[38;5;160m┌──────────────────────────────────────────────────────────┐    \033[0m")
+    print(f" \033[38;5;160m│\033[41;97;1m                    ARISCTUNNEL V6                        \033[0m\033[38;5;160m│\033[0m")
+    print(f" \033[38;5;160m└──────────────────────────────────────────────────────────┘    \033[0m")    
+    print(f" \033[38;5;160m┌──────────────────────────────────────────────────────────┐    \033[0m")
+    print(f" \033[38;5;160m│\033[97;1m System OS    : {os_name} {os_version} \033[0m")
+    print(f" \033[38;5;160m│\033[97;1m Cpu Usage    : {cpu_usage}%           \033[0m")
+    print(f" \033[38;5;160m│\033[97;1m Domain       : {domain}               \033[0m")
+    print(f" \033[38;5;160m│\033[97;1m IP VPS       : {ip_vps}               \033[0m")
+    print(f" \033[38;5;160m│\033[97;1m Cpu CORE     : {cpu_current}          \033[0m")
+    print(f" \033[38;5;160m│\033[97;1m Total RAM    : {ram_total}            \033[0m")
+    print(f" \033[38;5;160m│\033[97;1m Usage RAM    : {ram_usage}            \033[0m")
+    print(f" \033[38;5;160m└──────────────────────────────────────────────────────────┘    \033[0m")
+    print(f" \033[38;5;184m    SSH/OPVPN: {ssh}  |  VMESs: {vme}  |  VLESs: {vle}  | TROJAN: {tro} \033[0m")
+    print(f" \033[38;5;160m    ┌──────────────────────────────────────────────────┐\033[0m")
+    print(f" \033[38;5;160m      \033[97;1m1. Ssh/OPENVPN/Udp     \033[38;5;160m \033[0m     \033[97;1m6. BACKUP / RESTORE \033[0m")
+    print(f" \033[38;5;160m    │ \033[97;1m2. x-Ray VMess v2ray   \033[38;5;160m│\033[0m     \033[97;1m7. BOT TELEGRAM     \033[38;5;160m│ \033[0m")
+    print(f" \033[38;5;160m      \033[97;1m3. x-Ray VLess v2ray   \033[38;5;160m \033[0m     \033[97;1m8. REBUILD VPS      \033[0m")
+    print(f" \033[38;5;160m    │ \033[97;1m4. x-ray TRojan libev  \033[38;5;160m│\033[0m     \033[97;1m9. FEATURES         \033[38;5;160m│ \033[0m")
+    print(f" \033[38;5;160m      \033[97;1m5. Vps bench monitor   \033[38;5;160m \033[0m     \033[97;1mx. EXIT             \033[0m")
+    print(f" \033[38;5;160m    └──────────────────────────────────────────────────┘\033[0m")
+    print(f" \033[38;5;160m   ┌────────────────────────────────────────────────────┐\033[0m")
+    print(f" \033[38;5;160m   │ \033[92;1m•\033[97;1m SCRIPT ID KEY   : {username}                   \033[0m")
+    print(f" \033[38;5;160m   │ \033[92;1m•\033[97;1m SCRIPT EXPIRY   : {days_left} DAYS REMAINDERS  \033[0m")
+    print(f" \033[38;5;160m   └────────────────────────────────────────────────────┘\033[0m")
+    # Output the formatted string
+    print(f" \033[97;1m   LOADBALANCE = {haproxy_status}   NGINX = {nginx_status}   XRAY = {xray_status}")
+    print(f" \033[38;5;160m┌──────────────────────────────────────────────────────────┐    \033[0m")
+    print(f" \033[38;5;160m│\033[38;5;33m Thanks in Remain my scripts Ari Sc Tunneling @2019-2024  \033[0m\033[38;5;160m│\033[0m")
+    print(f" \033[38;5;160m└──────────────────────────────────────────────────────────┘    \033[0m")       
+if days_left is not None:
+    print(f" \033[97;1m Days Left    : {days_left} \033[31mnot REMAINDERS \033[0m")
+else:
+    print(f" \033[97;1m Days Left    : \033[31mData is not validity.      \033[0m")
+
+# select display
+def main_menu():
+    options = {
+        "1": "m-ssh",
+        "2": "m-vme",
+        "3": "m-vle",
+        "4": "m-tro",
+        "5": "bench",
+        "6": "m-bkp",
+        "7": "m-bot",
+        "8": "m-rbl",
+        "9": "m-ftr"
+    }
+    
+    while True:
+        display_menu()
+        choice = input("Enter your choice (1-9) or type 'x' to quit: ").strip()
+        if choice == 'x':
+            clear_screen()
+            print(f" \033[31m Exiting....\033[0m")
+            break
+        elif choice in options:
+            clear_screen()
+            os.system(options[choice])
+        else:
+            print("Pilihan tidak valid, coba lagi.")
+
+if __name__ == "__main__":
+    clear_screen()
+    check_validity()
+    main_menu()
