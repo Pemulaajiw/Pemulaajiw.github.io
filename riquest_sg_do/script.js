@@ -10,7 +10,7 @@ function sendWhatsAppRequest() {
     });
 
     // Construct the WhatsApp URL with the message
-    var whatsappUrl = "https://wa.me/6281327393959?text=" + message + message1;
+    var whatsappUrl = "https://wa.me/6285238906544?text=" + message + message1;
 
     // Redirect user to WhatsApp
     window.location.href = whatsappUrl;
