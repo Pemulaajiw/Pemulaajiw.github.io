@@ -13,25 +13,26 @@ a {
 	text-decoration: none;
 }
 .container {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+        text-align: center;
+        padding: 32px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 16px;
 }
-img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+.container img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
 }
-p {
-	color: black;
-	font-size: 1.4rem;
-	margin-top: 5px;
-	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 0.05rem;
+.container p {
+        font-size: 18px;
+        margin: 8px 0;
 }
+.container h2 {
+        font-size: 24px;
+        margin: 8px 0;
+}
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
