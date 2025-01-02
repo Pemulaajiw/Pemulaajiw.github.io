@@ -286,7 +286,7 @@ p {
 }
 
 #services .service-table {
-    background-color: #fff;
+    background-color: linear-gradient(60deg, #29323c 0%, #485563 100%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
