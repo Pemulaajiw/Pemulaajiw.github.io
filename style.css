@@ -276,6 +276,28 @@ p {
 	max-width: 500px;
 	margin: 0 auto;
 }
+#services .service-price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 32px 0;
+    gap: 20px;
+    padding: 24px;
+}
+
+#services .service-table {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#services .service-table h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 #services .service-bottom {
 	display: flex;
 	align-items: center;
@@ -695,6 +717,19 @@ p {
 	}
 	/* End header */
 
+	#services .service-price {
+                padding: 16px;
+        }
+
+        #services .service-table {
+                width: 100%;
+                margin-bottom: 20px;
+        }
+
+        #services .service-table h2 {
+                font-size: 18px;
+                margin-bottom: 10px;
+        }
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
