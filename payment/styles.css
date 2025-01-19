@@ -62,15 +62,15 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 
 .services {
 	flex-direction: column;
-	text-align: center;
+	text-align: center; /* Memastikan gambar berada di tengah */
 	max-width: 1500px;
-	margin: 0 auto;
+	margin-top: 20px; /* Memberikan jarak antara judul dan gambar */
 	padding: 100px 0;
 }
 
 .services img {
-	height: 100%;
-	width: 100%;
+	height: 100%; /* Biarkan tinggi menyesuaikan agar proporsional */
+	width: 100%; /* Buat gambar mengisi seluruh lebar tabel */
 	object-fit: cover;
 }
 
