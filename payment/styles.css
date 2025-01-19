@@ -87,6 +87,29 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 	margin: 32px 0;
 }
 
+.service-price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 32px 0;
+    gap: 20px;
+    padding: 24px;
+}
+
+.service-table {
+    background-color: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.service-table h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .icon {
 	width: 300px;
 	margin: 32px 0;
