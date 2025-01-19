@@ -45,7 +45,7 @@ margin-top: 10px; /* Memberikan jarak antara judul dan gambar QR */
 }
 
 .qr-code img {
-width: 100%; /* Buat gambar QR mengisi seluruh lebar tabel */
+width: 50%; /* Buat gambar QR mengisi seluruh lebar tabel */
 height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 }
 
