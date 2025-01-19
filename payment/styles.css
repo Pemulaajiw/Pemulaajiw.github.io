@@ -67,9 +67,16 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 	margin: 0 auto;
 	padding: 100px 0;
 }
+
 .service-top {
 	max-width: 500px;
 	margin: 0 auto;
+}
+
+.icon {
+	width: 70px;
+	margin: 0 auto;
+	margin-bottom: 10px;
 }
 
 .list-price {
