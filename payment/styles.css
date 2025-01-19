@@ -69,7 +69,7 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 }
 
 .filtur img {
-	height: 100%; /* Biarkan tinggi menyesuaikan agar proporsional */
+	height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 	width: 100%; /* Buat gambar mengisi seluruh lebar tabel */
 	object-fit: cover;
 }
