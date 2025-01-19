@@ -60,18 +60,26 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
     margin: 8px 0;
 }
 
-.services {
-	flex-direction: column;
-	text-align: center; /* Memastikan gambar berada di tengah */
-	max-width: 1500px;
-	margin-top: 20px; /* Memberikan jarak antara judul dan gambar */
-	padding: 100px 0;
+.filtur {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.services img {
+.filtur img {
 	height: 100%; /* Biarkan tinggi menyesuaikan agar proporsional */
 	width: 100%; /* Buat gambar mengisi seluruh lebar tabel */
 	object-fit: cover;
+}
+
+.services {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
 }
 
 .service-top {
