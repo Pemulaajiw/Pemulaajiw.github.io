@@ -60,6 +60,18 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
     margin: 8px 0;
 }
 
+.services {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.service-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
 .list-price {
     display: flex;
     flex-wrap: wrap;
