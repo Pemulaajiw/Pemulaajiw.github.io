@@ -69,7 +69,7 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 }
 
 .filtur img {
-	height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
+	height: 100%; /* Biarkan tinggi menyesuaikan agar proporsional */
 	width: 100%; /* Buat gambar mengisi seluruh lebar tabel */
 	object-fit: cover;
 }
@@ -79,7 +79,7 @@ height: auto; /* Biarkan tinggi menyesuaikan agar proporsional */
 	text-align: center;
 	max-width: 1500px;
 	margin: 32px 0;
-	padding: 24px;
+	padding: 100px;
 }
 
 .service-top {
