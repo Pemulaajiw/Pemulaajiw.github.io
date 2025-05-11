@@ -294,21 +294,21 @@ button a {
 	margin: 0 auto;
 }
 #services .service-price {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 32px 0;
-    gap: 20px;
-    padding: 24px;
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #services .service-table {
-    background-color: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    background-color: aqua;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
-    border-radius: 10px;
+    border: 2px solid #333;
+    border-radius: 14px;
+    transition: 0.2s ease;
 }
 
 #services .service-table h2 {
