@@ -185,6 +185,17 @@ ____________________________________________
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
+  <script>    
+  function toggleMenu(menuId) {
+    var menuContent = document.getElementById(menuId);
+    // Toggle display of menu content
+    if (menuContent.style.display === "none" || menuContent.style.display === "") {
+      menuContent.style.display = "block";
+    } else {
+      menuContent.style.display = "none";
+    }
+  }        
+</script>    
 </body>
 
 </html>
