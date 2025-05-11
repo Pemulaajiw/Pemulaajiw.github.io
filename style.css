@@ -381,6 +381,29 @@ button a {
 	justify-content: center;
 	flex-direction: column;
 }
+
+#projects .note-box {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      font-size: 16px;
+    }
+#projects .note-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+#projects .note-text {
+      line-height: 1.6;
+    }
+#projects .highlight {
+      font-weight: bold;
+      color: #6c757d;
+}
 #projects .project-item {
 	display: flex;
 	align-items: center;
