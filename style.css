@@ -618,11 +618,10 @@ button a {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 #footer .footer {
-        background-color: #111827;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        font-size: 0.9em;
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
 }
 #footer h2 {
 	color: white;
