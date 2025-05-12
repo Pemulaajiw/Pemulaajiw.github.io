@@ -19,9 +19,10 @@
           <img src="https://pemulaajiw.github.io/V2.4.jpg" alt="V2.4" >
     </div>
     <div class="service-price">
-          <div class="service-table">
+          <button class="service-table" onclick="toggleMenu('AUTO SKRIP')">AUTO SKRIP</button>
+          <div id="AUTO SKRIP" class="menu-content">
+          <ul class="price-list">             
             <h2>SCRIPT BY FAN TUNNEL V2.4</h2>
-            <ul class="price-list">
                 <li class="price-item">
                     <span class="item-name">1 BULAN  1IP</span>
                     <span class="item-price">Rp 10.000</span>
@@ -62,7 +63,7 @@
                     <span class="item-price">Rp 150.000</span>
                 </li>
                 <hr />
-            </ul>
+            </ul>              
             <button>
                 <a href="https://pemulaajiw.github.io/riquest_script_2.4/">Beli Sekarang</a>
             </button>
@@ -146,5 +147,16 @@
         <p>Hubungi kami :</p>
         <p><a href="https://wa.me/6285238906544">WhatsApp</a> | <a href="https://t.me/Fauziii09">Telegram</a></p>
     </div>
+<script>
+  function toggleMenu(menuId) {
+    var menuContent = document.getElementById(menuId);
+    // Toggle display of menu content
+    if (menuContent.style.display === "none" || menuContent.style.display === "") {
+      menuContent.style.display = "block";
+    } else {
+      menuContent.style.display = "none";
+    }
+  }
+</script>        
 </body>
 </html>
