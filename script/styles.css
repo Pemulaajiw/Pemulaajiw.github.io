@@ -109,6 +109,20 @@ button a {
     color: #007bff;
 }
 
+.menu-content {
+      display: none;
+      max-width: 400px;
+      margin: 5px auto 15px;
+      padding: 10px 15px;
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+    }
+
+.menu-content.active {
+      display: block;
+    }
 @media screen and (max-width: 768px) {
     .container {
         padding: 24px;
