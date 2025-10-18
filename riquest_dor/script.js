@@ -3,7 +3,7 @@ function sendWhatsAppRequest() {
     var formData = new FormData(form);
 
     // Build WhatsApp message with form data
-    var message = "BELI%20PAKET%20XL%202%20BULANAN%0A";
+    var message = "BELI%20PAKET%20XL%20%20BULANAN%0A";
     formData.forEach(function(value, key) {
         message += key + "%3A%20" + value + "%0A";
     });
