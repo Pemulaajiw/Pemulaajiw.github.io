@@ -829,6 +829,20 @@ button a {
                 font-size: 18px;
                 margin-bottom: 10px;
         }
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #e8f4fd;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #b8d4f0;
+    line-height: 1.8;
+}
 	
 .hero-buttons {
     display: flex;
@@ -871,6 +885,37 @@ button a {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
 }
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    color: #b8d4f0;
+    font-weight: 500;
+}
+	
 	
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
@@ -878,4 +923,5 @@ button a {
 	}
 }
 /* End  Media Query For Desktop */
+
 
