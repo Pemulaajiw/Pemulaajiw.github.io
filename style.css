@@ -241,7 +241,7 @@ button a {
 /* End Header section */
 
 /* Hero Section */
-#hero .hero {
+#hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -254,7 +254,7 @@ button a {
     overflow: hidden;
 }
 
-#hero .hero::before {
+#hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -265,7 +265,7 @@ button a {
     background-size: cover;
 }
 
-#hero .hero-content {
+#hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -277,38 +277,38 @@ button a {
     z-index: 2;
 }
 
-#hero .hero-text {
+#hero-text {
     text-align: left;
 }
 
-#hero .hero-title {
+#hero-title {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-#hero .hero-subtitle {
+#hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #e8f4fd;
     font-weight: 600;
 }
 
-#hero .hero-description {
+#hero-description {
     font-size: 1.1rem;
     margin-bottom: 30px;
     color: #b8d4f0;
     line-height: 1.8;
 }
 	
-#hero .hero-buttons {
+#hero-buttons {
     display: flex;
     gap: 20px;
     margin-bottom: 40px;
 }
 	
-#hero .hero-image {
+#hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -344,7 +344,7 @@ button a {
     50% { transform: translateY(-20px); }
 }
 
-#hero .hero-stats {
+#hero-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -1032,6 +1032,7 @@ button a {
 	}
 }
 /* End  Media Query For Desktop */
+
 
 
 
