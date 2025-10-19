@@ -4,6 +4,15 @@ body {
     padding: 0;
 }
 
+button {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 header {
     background-color: #333;
     color: #fff;
